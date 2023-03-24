@@ -74,7 +74,9 @@
       // Change the Candidate Name
       $('form').on('submit', function(event) {
         event.preventDefault();
-        contract.setCandidate($('input').val());
+        contract.setCandidate($('input').val(), function (err, result){
+          $('cadidateName').html($('input').val());
+        });
       })
 
     </script>
